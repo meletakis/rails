@@ -707,7 +707,7 @@ TIP: For more information about migrations, refer to [Active Record Migrations]
 At this point, you can use a bin/rails command to run the migration:
 
 ```bash
-$ bin/rails db:migrate
+$ bin/rake db:migrate
 ```
 
 Rails will execute this migration command and tell you it created the Articles
@@ -724,7 +724,7 @@ NOTE. Because you're working in the development environment by default, this
 command will apply to the database defined in the `development` section of your
 `config/database.yml` file. If you would like to execute migrations in another
 environment, for instance in production, you must explicitly pass it when
-invoking the command: `bin/rails db:migrate RAILS_ENV=production`.
+invoking the command: `bin/rake db:migrate RAILS_ENV=production`.
 
 ### Saving data in the controller
 
@@ -1570,7 +1570,7 @@ for it, and a foreign key constraint that points to the `id` column of the `arti
 table. Go ahead and run the migration:
 
 ```bash
-$ bin/rails db:migrate
+$ bin/rake db:migrate
 ```
 
 Rails is smart enough to only execute the migrations that have not already been
